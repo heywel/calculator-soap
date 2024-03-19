@@ -1,0 +1,74 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://localhost:2026/ws"
+           targetNamespace="http://localhost:2026/ws"
+           elementFormDefault="qualified">
+    <!--ADD-->
+    <xs:element name="AddRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="intA" type="xs:int"/>
+                <xs:element minOccurs="1" maxOccurs="1" name="intB" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AddResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="AddResult" type="tns:response"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--SUBSTRACT-->
+    <xs:element name="SubtractRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="intA" type="xs:int"/>
+                <xs:element minOccurs="1" maxOccurs="1" name="intB" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SubtractResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="SubtractResult" type="tns:response"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--MULTIPLY-->
+    <xs:element name="MultiplyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="intA" type="xs:int"/>
+                <xs:element minOccurs="1" maxOccurs="1" name="intB" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="MultiplyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="MultiplyResult" type="tns:response"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--DIVIDE-->
+    <xs:element name="DivideRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="intA" type="xs:int"/>
+                <xs:element minOccurs="1" maxOccurs="1" name="intB" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DivideResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="1" name="DivideResult" type="tns:response"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="response">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="result" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
